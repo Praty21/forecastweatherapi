@@ -65,7 +65,7 @@ pipeline {
                 bat "mvn -f C:/Users/Pratyush/Downloads/weatherapi-master/weatherapi-master/samples/forecastweatherapi-recommended/src/gateway/forecastweatherapi/pom.xml install -Pprod -Dusername=pratysin@gmail.com -Dpassword=Qwaszx@123 -Dorg=pratysin-97213-eval -Dapigee.config.options=update"
             }
         }
-    /*    stage('Integration Tests') {
+        stage('Integration Tests') {
             steps {
                 script {
                     try {
@@ -76,17 +76,17 @@ pipeline {
                         bat "cd $WORKSPACE/test/integration && npm test"
                     } catch (e) {
                         //if tests fail, I have used an shell script which has 3 APIs to undeploy, delete current revision & deploy previous stable revision
-                        bat "sh && sh undeploy.sh"
+                        // bat "bash undeploy.sh"
                         throw e
                     } finally {
                         // generate cucumber reports in both Test Pass/Fail scenario
-                        bat "cd $WORKSPACE/test/integration && cp reports.json $WORKSPACE"
+                        bat "cd $WORKSPACE/test/integration && copy reports.json $WORKSPACE"
                         cucumber fileIncludePattern: 'reports.json'
                         build job: 'cucumber-report'
                     }
                 }
             }
-        } */
+        } 
     }
 }
 
