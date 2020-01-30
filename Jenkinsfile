@@ -9,6 +9,8 @@ pipeline {
         jdk 'JDK'
         nodejs 'NODEJS'
     }
+    
+    def apigeeUsername = "pratysin@gmail.com"
 
     environment {
         //getting the current stable/deployed revision...this is used in undeloy.sh in case of failure...
@@ -21,7 +23,6 @@ pipeline {
                 sendNotifications 'STARTED'
                 bat "npm -v"
                 bat "mvn -v"
-                def apigeeUsername = "pratysin@gmail.com"
                 echo "$apigeeUsername"
                 echo "Stable Revision: ${env.stable_revision}"
             }
