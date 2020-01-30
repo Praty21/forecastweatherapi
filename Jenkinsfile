@@ -28,7 +28,7 @@ pipeline {
         stage('Policy-Code Analysis') {
             steps {
                 bat "npm install -g apigeelint"
-                bat "apigeelint -s C:/Users/613055268/Downloads/apigee-deploy-maven-plugin-master/samples/forecastweatherapi-recommended/src/gateway/forecastweatherapi/apiproxy/ -f codeframe.js"
+                bat "apigeelint -s C:/Users/Pratyush/Downloads/weatherapi-master/weatherapi-master/samples/forecastweatherapi-recommended/src/gateway/forecastweatherapi/apiproxy/ -f codeframe.js"
             }
         }
         stage('Unit-Test-With-Coverage') {
@@ -60,7 +60,7 @@ pipeline {
                  
                  // deploy only proxy and deploy both proxy and config based on edge.js update
                 //bat "sh && sh deploy.sh"
-                bat "mvn -f C:/Users/613055268/Downloads/apigee-deploy-maven-plugin-master/samples/forecastweatherapi-recommended/src/gateway/forecastweatherapi/pom.xml install -Pprod -Dusername=pratyush.singh@bt.com -Dpassword=Qwaszx@123 -Dorg=pratyushsingh-eval -Dapigee.config.options=update"
+                bat "mvn -f C:/Users/Pratyush/Downloads/weatherapi-master/weatherapi-master/samples/forecastweatherapi-recommended/src/gateway/forecastweatherapi/pom.xml install -Pprod -Dusername=pratyush.singh@bt.com -Dpassword=Qwaszx@123 -Dorg=pratyushsingh-eval -Dapigee.config.options=update"
             }
         }
         stage('Integration Tests') {
