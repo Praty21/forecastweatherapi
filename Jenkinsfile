@@ -61,7 +61,7 @@ pipeline {
                  
                  // deploy only proxy and deploy both proxy and config based on edge.js update
                 //bat "sh && sh deploy.sh"
-                bat "mvn -f C:/Users/Pratyush/Downloads/weatherapi-master/weatherapi-master/samples/forecastweatherapi-recommended/src/gateway/forecastweatherapi/pom.xml install -Pprod -Dusername=pratysin@gmail.com -Dpassword=Qwaszx@123 -Dorg=pratyushsingh-eval -Dapigee.config.options=update"
+                bat "mvn -f C:/Users/Pratyush/Downloads/weatherapi-master/weatherapi-master/samples/forecastweatherapi-recommended/src/gateway/forecastweatherapi/pom.xml install -Pprod -Dusername=pratysin@gmail.com -Dpassword=Qwaszx@123 -Dorg=pratysin-97213-eval -Dapigee.config.options=update"
             }
         }
         stage('Integration Tests') {
