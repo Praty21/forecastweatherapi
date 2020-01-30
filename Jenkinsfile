@@ -33,14 +33,14 @@ pipeline {
                 bat "apigeelint -s C:/Users/Pratyush/Downloads/weatherapi-master/weatherapi-master/samples/forecastweatherapi-recommended/src/gateway/forecastweatherapi/apiproxy/ -f codeframe.js"
             }
         }
-        stage('Unit-Test-With-Coverage') {
+  /*      stage('Unit-Test-With-Coverage') {
             steps {
-                script {
+               script {
                     try {
                         bat "npm install"
                         bat "npm test test/unit/*.js"
                         bat "npm run coverage test/unit/*.js"
-                    } catch (e) {
+                   } catch (e) {
                         throw e
                     } finally {
                         bat "cd coverage && cp cobertura-coverage.xml $WORKSPACE"
@@ -48,7 +48,7 @@ pipeline {
                     }
                 }
             }
-        }
+        } */
         /*stage('Promotion') {
             steps {
                 timeout(time: 2, unit: 'DAYS') {
