@@ -21,6 +21,7 @@ pipeline {
                 sendNotifications 'STARTED'
                 bat "npm -v"
                 bat "mvn -v"
+                def apigeeUsername = "pratysin@gmail.com"
                 echo "$apigeeUsername"
                 echo "Stable Revision: ${env.stable_revision}"
             }
@@ -60,7 +61,7 @@ pipeline {
                  
                  // deploy only proxy and deploy both proxy and config based on edge.js update
                 //bat "sh && sh deploy.sh"
-                bat "mvn -f C:/Users/Pratyush/Downloads/weatherapi-master/weatherapi-master/samples/forecastweatherapi-recommended/src/gateway/forecastweatherapi/pom.xml install -Pprod -Dusername=pratyush.singh@bt.com -Dpassword=Qwaszx@123 -Dorg=pratyushsingh-eval -Dapigee.config.options=update"
+                bat "mvn -f C:/Users/Pratyush/Downloads/weatherapi-master/weatherapi-master/samples/forecastweatherapi-recommended/src/gateway/forecastweatherapi/pom.xml install -Pprod -Dusername=pratysin@gmail.com -Dpassword=Qwaszx@123 -Dorg=pratyushsingh-eval -Dapigee.config.options=update"
             }
         }
         stage('Integration Tests') {
