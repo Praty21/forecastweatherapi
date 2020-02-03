@@ -72,8 +72,8 @@ pipeline {
                         // using credentials.sh to get the client_id and secret of the app..
                         // thought of using them in cucumber oauth feature
                         // bat "sh && sh credentials.sh"
-                        bat "cd $WORKSPACE/test/integration && npm install"
-                        bat "cd $WORKSPACE/test/integration && npm test"
+                        bat "cd $WORKSPACE\test\integration && npm install"
+                        bat "cd $WORKSPACE\test\integration && npm test"
                     } catch (e) {
                         //if tests fail, I have used an shell script which has 3 APIs to undeploy, delete current revision & deploy previous stable revision
                         // bat "bash undeploy.sh"
