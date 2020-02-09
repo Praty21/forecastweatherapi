@@ -9,7 +9,7 @@ Feature:
         Then response code should be 200
         And I store the value of body path $.jwt as access token
         And I set bearer token
-        When I set body to {"email": "cicd@mail.com"}
+        When I set body to {"email": "pratysin@gmail.com"}
         And I set headers to
           | name          | value            |
           | Content-Type  | application/json |
@@ -24,7 +24,7 @@ Feature:
         Then response code should be 200
         And I store the value of body path $.access_token as access token
         And I set bearer token
-        When I DELETE /hr22/9886244926Siddharth
+        When I DELETE /weatherapi/8197703300Pratyush
         Then response code should be 200
         And response body path $.msg should be Record deleted
 
