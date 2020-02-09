@@ -85,12 +85,12 @@ pipeline {
                         bat "cd $WORKSPACE/test/integration && copy reports.json $WORKSPACE"
                         cucumber fileIncludePattern: 'reports.json'
                         build job: 'cucumber-report'
-                       }
+                 }
             } 
         }
     }
 }
-
+}
 /*
 using shared library for slack reporting
     the lib groovy script must be placed in a vars folder in SCM
