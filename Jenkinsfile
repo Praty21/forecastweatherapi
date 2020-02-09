@@ -67,7 +67,7 @@ pipeline {
         }
       /*  stage('Integration Tests') {
             steps {
-                script {
+              /*  script {
                   /*  try {
                         // using credentials.sh to get the client_id and secret of the app..
                         // thought of using them in cucumber oauth feature
@@ -80,13 +80,16 @@ pipeline {
                         // bat "bash undeploy.sh"
                         throw e
                     }*/ 
-                         finally {
+                        /* finally {
                         // generate cucumber reports in both Test Pass/Fail scenario
                         bat "cd $WORKSPACE/test/integration && copy reports.json $WORKSPACE"
                         cucumber fileIncludePattern: 'reports.json'
                         build job: 'cucumber-report'
-                    }
-                }
+                    } */
+                } */
+                            bat "cd $WORKSPACE/test/integration && copy reports.json $WORKSPACE"
+                        cucumber fileIncludePattern: 'reports.json'
+                        build job: 'cucumber-report'
             }
         } 
     }
