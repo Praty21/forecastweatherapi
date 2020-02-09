@@ -68,17 +68,19 @@ pipeline {
       /*  stage('Integration Tests') {
             steps {
                 script {
-                    try {
+                  /*  try {
                         // using credentials.sh to get the client_id and secret of the app..
                         // thought of using them in cucumber oauth feature
                         // bat "sh && sh credentials.sh"
                         bat "cd $WORKSPACE/test/integration && npm install"
                         bat "cd $WORKSPACE/test/integration && npm test"
-                    } catch (e) {
+                    }*/ 
+                      /* catch (e) {
                         //if tests fail, I have used an shell script which has 3 APIs to undeploy, delete current revision & deploy previous stable revision
                         // bat "bash undeploy.sh"
                         throw e
-                    } finally {
+                    }*/ 
+                         finally {
                         // generate cucumber reports in both Test Pass/Fail scenario
                         bat "cd $WORKSPACE/test/integration && copy reports.json $WORKSPACE"
                         cucumber fileIncludePattern: 'reports.json'
@@ -86,7 +88,7 @@ pipeline {
                     }
                 }
             }
-        } */
+        } 
     }
 }
 
