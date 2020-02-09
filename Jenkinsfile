@@ -65,7 +65,7 @@ pipeline {
                 bat "mvn -f C:/Users/Pratyush/Downloads/weatherapi-master/weatherapi-master/samples/forecastweatherapi-recommended/src/gateway/forecastweatherapi/pom.xml install -Pprod -Dusername=pratysin@gmail.com -Dpassword=Qwaszx@123 -Dorg=pratysin-97213-eval -Dapigee.config.options=update"
             }
         }
-        stage('Integration Tests') {
+      /*  stage('Integration Tests') {
             steps {
                 script {
                     try {
@@ -86,7 +86,7 @@ pipeline {
                     }
                 }
             }
-        } 
+        } /*
     }
 }
 
