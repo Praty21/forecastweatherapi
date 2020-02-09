@@ -87,7 +87,7 @@ pipeline {
                         build job: 'cucumber-report'
                     } */
         bat "cd $WORKSPACE/test/integration && copy reports.json $WORKSPACE"
-        cucumber fileIncludePattern: 'reports.json'
+       /* cucumber fileIncludePattern: 'reports.json' */
         build job: 'cucumber-report'
             }
         } 
